@@ -64,7 +64,9 @@
     "@dcloudio/uni-stacktracey": "3.0.0-3081220230817001",
     "@dcloudio/vite-plugin-uni": "3.0.0-3081220230817001",
     "@vue/runtime-core": "^3.2.45",
+    "commitizen": "^4.3.0",
     "cross-env": "^7.0.3",
+    "cz-git": "^1.7.1",
     "husky": "^8.0.3",
     "prettier": "^3.0.2",
     "vite": "4.1.4"
@@ -73,5 +75,10 @@
     "src/**/*.{ts,tsx}": [
       "pnpm run lint:prettier"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   }
 }
