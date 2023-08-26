@@ -36,7 +36,13 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
-    "pre-check": "npx lint-staged"
+    "pre-check": "npx lint-staged",
+    "release": "standard-version",
+    "release:alpha": "standard-version --prerelease alpha",
+    "release:rc": "standard-version --prerelease rc",
+    "release:major": "pnpm run release -- --release-as major",
+    "release:minor": "pnpm run release -- --release-as minor",
+    "release:patch": "pnpm run release -- --release-as patch"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-3081220230817001",
@@ -69,6 +75,7 @@
     "cz-git": "^1.7.1",
     "husky": "^8.0.3",
     "prettier": "^3.0.2",
+    "standard-version": "^9.5.0",
     "vite": "4.1.4"
   },
   "lint-staged": {
